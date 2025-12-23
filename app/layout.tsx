@@ -1,11 +1,11 @@
 // import '@Styles/app.scss';
 import '@Styles/global.css';
 
-import { inter, raleway } from '@Constants/fonts';
+import { inter, kumbh_sans } from '@Constants/fonts';
 import MainLayout from '@Layout/MainLayout';
-import { uiHelper } from '@Utils/uiHelper';
+// import { uiHelper } from '@Utils/uiHelper';
 import type { Metadata } from 'next';
-import Script from 'next/script';
+// import Script from 'next/script';
 import type React from 'react';
 
 export const metadata: Metadata = {
@@ -27,11 +27,11 @@ export default function RootLayout({
             __html: `history.scrollRestoration = 'manual'`,
           }}
         />
-        {uiHelper.isDevelopment() && (
+        {/* {uiHelper.isDevelopment() && (
           <Script src="https://unpkg.com/react-scan/dist/auto.global.js"></Script>
-        )}
+        )} */}
       </head>
-      <body className={`${inter.variable} ${raleway.variable}`}>
+      <body className={`${inter.variable} ${kumbh_sans.variable}`}>
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

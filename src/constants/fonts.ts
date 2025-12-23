@@ -1,15 +1,15 @@
-import { Inter, Raleway } from 'next/font/google';
+import { Inter, Kumbh_Sans } from 'next/font/google';
 
 export const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
 
-export const raleway = Raleway({
-  variable: '--font-raleway',
+export const kumbh_sans = Kumbh_Sans({
+  variable: '--font-kumbh-sans',
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['400', '500'],
   display: 'swap',
 });

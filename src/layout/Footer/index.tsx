@@ -1,25 +1,12 @@
-import { Container, GridContainer } from '@Components/Container';
-import Heading from '@Components/Typo/Heading';
-import Label from '@Components/Typo/Label';
-import Paragraph from '@Components/Typo/Paragraph';
-import {
-  FontWeight,
-  TypoColor,
-  TypoFontFamily,
-  TypoTagHeading,
-  TypoTagLabel,
-  TypoTagParagraph,
-  TypoTransform,
-} from '@Enums/typo';
 import type React from 'react';
 
 import styles from './footer.module.scss';
-import Form from './Form';
 
 function Footer(): React.JSX.Element {
   return (
     <div className={styles.footer}>
-      <Container>
+      footer
+      {/* <Container>
         <GridContainer>
           <div className={styles.footer_left}>
             <div className={styles.footer_left_top}>
@@ -107,7 +94,7 @@ function Footer(): React.JSX.Element {
             </div>
           </div>
         </GridContainer>
-      </Container>
+      </Container> */}
     </div>
   );
 }
