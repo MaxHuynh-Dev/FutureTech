@@ -1,5 +1,6 @@
 'use client';
 
+import { Container } from '@/components/Container';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -8,18 +9,24 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import Text from '@/components/ui/text';
 import type React from 'react';
 import { useEffect, useRef } from 'react';
 
 function HomePage(): React.ReactElement {
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const textRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     console.log(buttonRef.current);
+    console.log(textRef.current);
   }, []);
 
   return (
-    <>
+    <Container>
+      <Text as="h4" size={30} weight={'medium'} ref={textRef} font={'heading'}>
+        Hello
+      </Text>
       <Button
         onClick={() => {
           alert('Hello');
@@ -33,9 +40,7 @@ function HomePage(): React.ReactElement {
         </div>
       </Button>
       <DropdownMenu>
-        <DropdownMenuTrigger>
-          <Button variant="outline">Options</Button>
-        </DropdownMenuTrigger>
+        <DropdownMenuTrigger>Options</DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuItem>Edit</DropdownMenuItem>
           <DropdownMenuItem>Duplicate</DropdownMenuItem>
@@ -43,7 +48,7 @@ function HomePage(): React.ReactElement {
           <DropdownMenuItem>Archive</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-    </>
+    </Container>
   );
 }
 

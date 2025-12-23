@@ -1,10 +1,5 @@
-import SvgInsert from '@Components/SvgInsert';
-import Label from '@Components/Typo/Label';
-import { FontWeight, TypoColor, TypoTagLabel, TypoTransform } from '@Enums/typo';
-import cn from 'classnames';
+import { Button } from '@/components/ui/button';
 import type React from 'react';
-
-import s from './styles.module.scss';
 
 interface TPrimaryButton {
   color?: 'dark' | 'white';
@@ -17,33 +12,11 @@ interface TPrimaryButton {
 }
 
 export default function PrimaryButton({ ...props }: TPrimaryButton): React.JSX.Element {
-  const { text = '', className, color = 'dark', onClick } = props;
-
-  const primaryButtonClassNames = cn(s.primaryButton, s[`primaryButton_${color}`], className);
+  const { text = '', className, onClick } = props;
 
   return (
-    <button type="button" className={primaryButtonClassNames} onClick={onClick}>
-      <div className={s.primaryButton_text}>
-        <Label
-          color={TypoColor.black}
-          size={22}
-          fontWeight={FontWeight.semiBold}
-          textTransform={TypoTransform.uppercase}
-          as={TypoTagLabel.label}
-          className={s.primaryButton_text}
-        >
-          {text}
-        </Label>
-      </div>
-
-      <div className={s.primaryButton_icon}>
-        <SvgInsert
-          src="/icons/arrow-btn.svg"
-          width={19}
-          height={19}
-          className={s.primaryButton_icon_arrow}
-        />
-      </div>
-    </button>
+    <Button variant="default" className={className} onClick={onClick}>
+      {text}
+    </Button>
   );
 }

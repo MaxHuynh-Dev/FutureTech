@@ -5,11 +5,9 @@ import cn from 'classnames';
 import type React from 'react';
 import { Activity, useCallback, useEffect, useState } from 'react';
 
-import s from './styles.module.scss';
-
 const GridColumn = (): React.ReactElement => (
-  <div className={s.grid_column}>
-    <div className={s.grid_col} />
+  <div className="col-span-1">
+    <div className="bg-[#ff6b4c4c] h-screen relative before:absolute before:left-0 before:top-0 before:h-full before:w-px before:bg-[#ff6b4c4c] after:absolute after:right-0 after:top-0 after:h-full after:w-px after:bg-[#ff6b4c4c]" />
   </div>
 );
 
@@ -50,7 +48,11 @@ export default function GridDebug(): React.ReactElement {
 
   return (
     <Activity mode={isGrid ? 'visible' : 'hidden'} name="Grid Debug">
-      <div className={cn(s.gridDebug)}>
+      <div
+        className={cn(
+          'h-full pointer-events-none fixed w-full top-0 left-1/2 -translate-x-1/2 z-50'
+        )}
+      >
         <Container>
           <GridContainer>
             {Array.from({ length: 12 }).map((_, index) => (
