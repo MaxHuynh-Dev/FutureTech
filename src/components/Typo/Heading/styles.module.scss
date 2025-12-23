@@ -1,0 +1,48 @@
+.text {
+  font-style: normal;
+  line-height: 100%;
+
+  &__25 {
+    font-size: rem(25px);
+  }
+
+  &__30 {
+    font-size: rem(30px);
+  }
+
+  &__60 {
+    font-size: rem(60px);
+    line-height: 120%;
+    letter-spacing: rem(-1.2px);
+  }
+  &__64 {
+    font-size: rem(64px);
+    line-height: 1em;
+    letter-spacing: -0.64px;
+  }
+  &__72 {
+    font-size: rem(72px);
+    line-height: 1em;
+    letter-spacing: -0.72px;
+  }
+  &__85 {
+    font-size: rem(85px);
+    line-height: 1em;
+    letter-spacing: 2.55px;
+  }
+  &__88 {
+    font-size: rem(88px);
+    letter-spacing: -0.88px;
+    line-height: 0.88em;
+  }
+
+  &__250 {
+    font-size: rem(250px);
+    line-height: 1.2em;
+    letter-spacing: rem(-2.5px);
+  }
+  &__130 {
+    font-size: rem(130px);
+    line-height: 1em;
+  }
+}

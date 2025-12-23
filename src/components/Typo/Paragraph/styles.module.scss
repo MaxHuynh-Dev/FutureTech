@@ -1,0 +1,37 @@
+.text {
+  font-style: normal;
+  &__48 {
+    font-size: rem(48px);
+    line-height: 1.2em;
+    letter-spacing: -0.48px;
+  }
+  &__24 {
+    font-size: rem(24px);
+    line-height: 1.2em;
+    letter-spacing: rem(-0.24px);
+  }
+  &__36 {
+    font-size: rem(36px);
+    line-height: 122.222%;
+    letter-spacing: rem(-0.72px);
+  }
+  &__30 {
+    font-size: rem(30px);
+    line-height: 126.667%;
+    letter-spacing: rem(-0.3px);
+  }
+  &__18 {
+    font-size: rem(18px);
+    line-height: 1.2em;
+    letter-spacing: rem(-0.18px);
+  }
+  &__16 {
+    font-size: rem(16px);
+    line-height: 0.88em;
+    letter-spacing: rem(-0.16px);
+  }
+  &__20 {
+    font-size: rem(20px);
+    line-height: 1.3em;
+  }
+}

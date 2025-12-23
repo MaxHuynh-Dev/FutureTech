@@ -1,0 +1,84 @@
+@use "sass:math" as math;
+
+@function rem($px, $base: 10px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@function em($px, $base: 10px) {
+  @return math.div($px, $base) * 1em;
+}
+
+@function vh($px, $base: 810px) {
+  @return math.div($px, $base) * 100vh;
+}
+
+@function vw($px, $base: 1600px) {
+  @return math.div($px, $base) * 100vw;
+}
+
+@function px($val) {
+  @return $val * 1px;
+}
+
+@mixin w-from-to($from, $to) {
+  @media screen and (min-width: $from) and (max-width: $to) {
+    @content;
+  }
+}
+
+@mixin w-min($to) {
+  @media screen and (min-width: $to) {
+    @content;
+  }
+}
+
+@mixin w-max($to) {
+  @media screen and (max-width: $to) {
+    @content;
+  }
+}
+
+@mixin onlyMobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin is-tablet() {
+  @media (max-width: 1200px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin hideScrollbar {
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

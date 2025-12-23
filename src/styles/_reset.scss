@@ -1,0 +1,177 @@
+@use "tool" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+  outline: none;
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  @include tablet {
+    font-size: vw(10px, 810px);
+  }
+  @include laptop {
+    font-size: vw(10px);
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+[hidden] {
+  visibility: hidden;
+}
+
+html,
+body {
+  font-smoothing: antialiased !important;
+  -webkit-font-smoothing: antialiased !important;
+  scroll-behavior: unset !important;
+  overscroll-behavior-y: none !important;
+  min-height: -webkit-fill-available;
+  font-family: var(--font-inter);
+  background-color: var(--bg-background);
+  color: var(--white);
+  font-size: vw(10px);
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+video,
+img {
+  max-width: 100%;
+}
+
+video::-webkit-media-controls {
+  display: none;
+}
+
+img:is([loading="lazy"]) {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  line-height: 110%;
+  font-weight: normal;
+  color: #000;
+  background-color: var(--bg-background);
+  transition: background-color 0.4s var(--easeInOutQuart);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

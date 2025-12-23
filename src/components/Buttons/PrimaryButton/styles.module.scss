@@ -1,0 +1,32 @@
+.primaryButton {
+  --color-btn: var(--vani);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: rem(10px);
+  background-color: transparent;
+  label {
+    color: var(--color-btn);
+    cursor: pointer;
+    text-box: trim-both cap alphabetic;
+  }
+  &_text {
+    color: var(--color-btn);
+    padding-bottom: rem(7px);
+    border-bottom: 2px solid currentColor;
+  }
+
+  &_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(50px);
+    height: rem(50px);
+    background-color: var(--color-btn);
+    border-radius: 50%;
+    & svg {
+      width: rem(17px);
+      height: rem(17px);
+    }
+  }
+}

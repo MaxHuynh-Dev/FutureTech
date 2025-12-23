@@ -1,0 +1,27 @@
+.form {
+  margin-top: rem(110px);
+
+  &_group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(48px);
+  }
+
+  &_button {
+    margin-top: rem(132px);
+  }
+
+  &_input {
+    margin-top: rem(50px);
+  }
+
+  input {
+    width: 100%;
+    outline: none;
+    font-size: rem(20px);
+    color: var(--vani);
+    background-color: transparent;
+    border-bottom: 1px solid #292929;
+    padding-block: rem(20px);
+  }
+}

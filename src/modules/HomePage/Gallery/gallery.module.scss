@@ -1,0 +1,24 @@
+.gallery {
+  padding-top: var(--spacing-section);
+  padding-left: rem(50px);
+  &_left {
+    grid-column: span 6;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &_bottom {
+      max-width: rem(483px);
+      display: flex;
+      flex-direction: column;
+      gap: rem(106px);
+    }
+  }
+  &_right {
+    grid-column: span 6;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: rem(355px) 1fr;
+    gap: rem(24px);
+    margin-left: rem(-24px);
+  }
+}

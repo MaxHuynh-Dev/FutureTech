@@ -1,0 +1,80 @@
+.text {
+  font-style: normal;
+  line-height: 120%;
+
+  &__200 {
+    @include laptop {
+      font-size: rem(200px);
+    }
+  }
+
+  &__64 {
+    @include laptop {
+      font-size: rem(64px);
+      line-height: 1;
+    }
+  }
+
+  &__28 {
+    @include laptop {
+      font-size: rem(28px);
+    }
+  }
+
+  &__20 {
+    @include laptop {
+      font-size: rem(20px);
+    }
+  }
+
+  &__22 {
+    @include laptop {
+      font-size: rem(22px);
+    }
+  }
+
+  &__24 {
+    @include laptop {
+      font-size: rem(24px);
+    }
+  }
+
+  &__18 {
+    font-size: rem(16px);
+
+    @include tablet {
+      font-size: rem(18px);
+    }
+  }
+
+  &__17 {
+    font-size: rem(17px);
+  }
+
+  &__16 {
+    font-size: rem(16px);
+
+    @include tablet {
+      font-size: rem(16px);
+    }
+  }
+  &__14 {
+    font-size: rem(14px);
+    line-height: normal;
+  }
+
+  &__12 {
+    font-size: rem(12px);
+    line-height: normal;
+  }
+
+  &__13 {
+    font-size: rem(13px);
+    line-height: normal;
+  }
+
+  &__60 {
+    font-size: rem(60px);
+    line-height: normal;
+  }
+}
