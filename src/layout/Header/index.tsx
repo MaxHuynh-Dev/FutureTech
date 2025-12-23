@@ -1,11 +1,10 @@
 import { Container } from '@Components/Container';
 import ImagePlaceHolder from '@Components/ImagePlaceHolder';
-import Label from '@Components/Typo/Label';
 import { ROUTER } from '@Constants/router';
-import { TypoColor, TypoTagLabel, TypoTransform } from '@Enums/typo';
 import Link from 'next/link';
 import type React from 'react';
 
+import Text from '@/components/ui/text';
 import s from './header.module.scss';
 
 function Header(): React.ReactElement {
@@ -20,14 +19,9 @@ function Header(): React.ReactElement {
             {ROUTER.map((item) => (
               <li key={item.href}>
                 <Link href={item.href}>
-                  <Label
-                    as={TypoTagLabel.span}
-                    size={18}
-                    color={TypoColor.vani}
-                    textTransform={TypoTransform.uppercase}
-                  >
+                  <Text as="span" size={16} weight={'medium'}>
                     {item.label}
-                  </Label>
+                  </Text>
                 </Link>
               </li>
             ))}

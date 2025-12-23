@@ -1,18 +1,5 @@
 'use client';
 
-import PrimaryButton from '@Components/Buttons/PrimaryButton';
-import { Container } from '@Components/Container';
-import Heading from '@Components/Typo/Heading';
-import Paragraph from '@Components/Typo/Paragraph';
-import {
-  FontWeight,
-  TypoColor,
-  TypoFontFamily,
-  TypoTagHeading,
-  TypoTagParagraph,
-  TypoTransform,
-} from '@Enums/typo';
-import classNames from 'classnames';
 import type React from 'react';
 
 import styles from './hero.module.scss';
@@ -20,7 +7,7 @@ import styles from './hero.module.scss';
 function Hero(): React.ReactElement {
   return (
     <div className={styles.hero}>
-      <div className={styles.hero_background}>
+      {/* <div className={styles.hero_background}>
         <video autoPlay muted loop playsInline>
           <source src="/videos/video.mp4" type="video/mp4" />
         </video>
@@ -52,7 +39,7 @@ function Hero(): React.ReactElement {
             <PrimaryButton text="Explore our work" />
           </div>
         </div>
-      </Container>
+      </Container> */}
     </div>
   );
 }

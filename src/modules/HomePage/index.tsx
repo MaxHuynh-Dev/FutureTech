@@ -24,7 +24,7 @@ function HomePage(): React.ReactElement {
 
   return (
     <Container>
-      <Text as="h1" size={30} weight={'medium'} ref={textRef} font={'heading'}>
+      <Text as="h1" size={30} color={'grey-60'} weight={'medium'} ref={textRef} font={'heading'}>
         Hello
       </Text>
       <Button
