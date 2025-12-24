@@ -6,7 +6,7 @@ const textVariants = cva('text-foreground transition-colors duration-200', {
   variants: {
     size: {
       12: 'tracking-[-0.36px] text-[12px]/[1.5] laptop:tracking-[-0.42px] laptop:text-[14px] desktop:tracking-[-0.54px] desktop:text-[18px]',
-      //   14: 'text-sm',
+      14: 'text-[14px]/[1.5] laptop:text-[16px] desktop:text-[18px]',
       16: 'text-base',
       // 18: 'text-lg',
 
@@ -23,6 +23,11 @@ const textVariants = cva('text-foreground transition-colors duration-200', {
       semibold: 'font-semibold',
       bold: 'font-bold',
       extrabold: 'font-extrabold',
+    },
+    transform: {
+      uppercase: 'uppercase',
+      lowercase: 'lowercase',
+      capitalize: 'capitalize',
     },
     font: {
       body: 'font-body',
@@ -84,7 +89,7 @@ interface TextComponent {
 }
 
 const Text = React.forwardRef<HTMLElement, TextProps<TextAs>>(function TextInner(
-  { as, className, size, weight, color, font, ...props }: TextProps<TextAs>,
+  { as, className, size, weight, color, font, transform, ...props }: TextProps<TextAs>,
   ref
 ) {
   const Component: TextAs = as ?? 'p';
@@ -92,7 +97,7 @@ const Text = React.forwardRef<HTMLElement, TextProps<TextAs>>(function TextInner
   return React.createElement(Component, {
     ...(props as unknown as Record<string, unknown>),
     ref,
-    className: cn(textVariants({ size, weight, color, font, className })),
+    className: cn(textVariants({ size, weight, color, font, transform, className })),
   });
 }) as unknown as TextComponent;
 
