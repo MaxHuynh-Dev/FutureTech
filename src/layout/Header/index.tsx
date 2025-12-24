@@ -18,7 +18,7 @@ function Header(): React.ReactElement {
     <div className={'bg-dark-10 fixed top-0 left-0 w-full z-10'}>
       <div
         className={
-          'bg-dark-08 flex items-center justify-center gap-[10px] py-[15px] laptop:py-[12px] desktop:py-[20px] '
+          'bg-dark-08 flex items-center justify-center gap-[10px] py-[15px] laptop:py-[12px] desktop:py-[20px]'
         }
       >
         <Text color={'grey-60'} size={12}>
