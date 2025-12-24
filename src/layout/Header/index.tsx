@@ -38,7 +38,6 @@ function Header(): React.ReactElement {
                 className="w-full h-full object-contain"
               />
             </Link>
-
             <ul className={'hidden laptop:flex items-center gap-4'}>
               {ROUTER.map((item) => {
                 const isActive = pathname === item.href;

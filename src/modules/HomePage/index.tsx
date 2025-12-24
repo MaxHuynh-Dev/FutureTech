@@ -1,54 +1,13 @@
 'use client';
 
-import { Container } from '@/components/Container';
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import Text from '@/components/ui/text';
-import type React from 'react';
-import { useEffect, useRef } from 'react';
+import React from 'react';
+import Hero from './Hero';
 
 function HomePage(): React.ReactElement {
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  const textRef = useRef<HTMLHeadingElement>(null);
-
-  useEffect(() => {
-    console.log(buttonRef.current);
-    console.log(textRef.current);
-  }, []);
-
   return (
-    <Container>
-      <Text as="h1" size={30} color={'grey-60'} weight={'medium'} ref={textRef} font={'heading'}>
-        Hello
-      </Text>
-      <Button
-        onClick={() => {
-          alert('Hello');
-        }}
-        className="bg-yellow-55 text-dark-08"
-        ref={buttonRef}
-      >
-        Click me
-        <div>
-          <p>icon</p>
-        </div>
-      </Button>
-      <DropdownMenu>
-        <DropdownMenuTrigger>Options</DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuItem>Edit</DropdownMenuItem>
-          <DropdownMenuItem>Duplicate</DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Archive</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </Container>
+    <React.Fragment>
+      <Hero />
+    </React.Fragment>
   );
 }
 
