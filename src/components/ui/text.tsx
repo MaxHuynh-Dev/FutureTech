@@ -5,10 +5,10 @@ import * as React from 'react';
 const textVariants = cva('text-foreground transition-colors duration-200', {
   variants: {
     size: {
-      //   12: 'text-xs',
+      12: 'tracking-[-0.36px] text-[12px]/[1.5] laptop:tracking-[-0.42px] laptop:text-[14px] desktop:tracking-[-0.54px] desktop:text-[18px]',
       //   14: 'text-sm',
       16: 'text-base',
-      //   18: 'text-lg',
+      // 18: 'text-lg',
 
       //   20: 'text-xl laptop:text-2xl',
       //   24: 'text-2xl laptop:text-3xl',
