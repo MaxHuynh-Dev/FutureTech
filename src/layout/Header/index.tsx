@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import Text from '@/components/ui/text';
 import { ROUTER } from '@/constants/router';
 import { cn } from '@/lib/utils';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, TextAlignEnd } from 'lucide-react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
@@ -39,7 +39,7 @@ function Header(): React.ReactElement {
               />
             </Link>
 
-            <ul className={'flex items-center gap-4'}>
+            <ul className={'hidden laptop:flex items-center gap-4'}>
               {ROUTER.map((item) => {
                 const isActive = pathname === item.href;
                 const activeClass = isActive && 'bg-dark-08 border-dark-20';
@@ -66,8 +66,12 @@ function Header(): React.ReactElement {
                 );
               })}
             </ul>
-
-            <Button variant="yellow">Contact Us</Button>
+            <Button variant="yellow" className="hidden laptop:block">
+              Contact Us
+            </Button>
+            <div className="block laptop:hidden">
+              <TextAlignEnd color="#fff" strokeWidth={2} className="w-8 h-8" />
+            </div>
           </div>
         </Container>
       </div>
