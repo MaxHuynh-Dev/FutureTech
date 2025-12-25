@@ -2,16 +2,16 @@ import { Container } from "@/components/Container";
 import Text from "@/components/ui/text";
 import type React from "react";
 
-type FeatureCardModel = {
+interface FeatureCardModel {
   title: string;
   description: string;
-};
+}
 
-type FeatureBlockModel = {
+interface FeatureBlockModel {
   title: string;
   description: string;
   cardList: readonly FeatureCardModel[];
-};
+}
 
 const FEATURE_BLOCK_LIST: readonly FeatureBlockModel[] = [
   {

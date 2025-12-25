@@ -17,7 +17,7 @@ type BlogCategoryModel =
   | "Biotechnology"
   | "Renewable Energy";
 
-type BlogPostModel = {
+interface BlogPostModel {
   id: string;
   authorName: string;
   authorTopic: string;
@@ -30,7 +30,7 @@ type BlogPostModel = {
     shares: string;
   };
   category: Exclude<BlogCategoryModel, "All">;
-};
+}
 
 const BLOG_CATEGORY_LIST: readonly BlogCategoryModel[] = [
   "All",
@@ -74,9 +74,9 @@ const BLOG_POST_LIST: readonly BlogPostModel[] = [
   },
 ];
 
-type BlogListItemProp = {
+interface BlogListItemProp {
   post: BlogPostModel;
-};
+}
 
 function BlogStatPill({
   icon,
@@ -196,7 +196,7 @@ function Blogs(): React.ReactElement {
               <button
                 key={cat}
                 type="button"
-                onClick={() => setActiveCategory(cat)}
+                onClick={() => { setActiveCategory(cat); }}
                 className={cn(
                   "border-dark-15 flex flex-1 items-center justify-center rounded-[8px] border px-[24px] py-[30px] text-[18px]/[1.5] tracking-[-0.54px]",
                   isActive ? "bg-dark-10 text-white" : "text-grey-60",

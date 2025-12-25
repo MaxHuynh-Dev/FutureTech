@@ -5,16 +5,16 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 
-type FooterLinkModel = {
+interface FooterLinkModel {
   label: string;
   href: string;
   isNew?: boolean;
-};
+}
 
-type FooterColumnModel = {
+interface FooterColumnModel {
   title: string;
   links: readonly FooterLinkModel[];
-};
+}
 
 const FOOTER_COLUMN_LIST: readonly FooterColumnModel[] = [
   {

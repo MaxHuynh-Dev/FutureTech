@@ -5,12 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import type React from "react";
 
-type TestimonialModel = {
+interface TestimonialModel {
   id: string;
   name: string;
   location: string;
   content: string;
-};
+}
 
 const TESTIMONIAL_LIST: readonly TestimonialModel[] = [
   {
@@ -57,9 +57,9 @@ const TESTIMONIAL_LIST: readonly TestimonialModel[] = [
   },
 ];
 
-type TestimonialCardProp = {
+interface TestimonialCardProp {
   item: TestimonialModel;
-};
+}
 
 function TestimonialCard({ item }: TestimonialCardProp): React.ReactElement {
   return (

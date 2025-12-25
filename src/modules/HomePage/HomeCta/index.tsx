@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import type React from "react";
 
-type CtaCardModel = {
+interface CtaCardModel {
   title: string;
   description: string;
-};
+}
 
 const CTA_CARD_LIST: readonly CtaCardModel[] = [
   {

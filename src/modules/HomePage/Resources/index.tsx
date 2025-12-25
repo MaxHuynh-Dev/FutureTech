@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type React from "react";
 
-type ResourceBlockModel = {
+interface ResourceBlockModel {
   id: string;
   badgeTitle: string;
   description: string;
@@ -19,7 +19,7 @@ type ResourceBlockModel = {
   authorLabel: string;
   authorValue: string;
   imageSrc: string;
-};
+}
 
 const RESOURCE_BLOCK_LIST: readonly ResourceBlockModel[] = [
   {
