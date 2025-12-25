@@ -1,12 +1,12 @@
 import Text from "@/components/ui/text";
 import type React from "react";
 
-interface CountProps {
+interface CountProp {
   number: string;
   description: string;
 }
 
-function Count({ number, description }: CountProps): React.ReactElement {
+function Count({ number, description }: CountProp): React.ReactElement {
   return (
     <div className="desktop:py-[50px] laptop:py-[30px] py-[20px]">
       <div className="flex flex-col gap-[10px]">

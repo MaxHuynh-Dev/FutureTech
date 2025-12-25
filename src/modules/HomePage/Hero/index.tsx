@@ -3,6 +3,8 @@
 import Text from "@/components/ui/text";
 import type React from "react";
 import Count from "./Count";
+import HeroHighlights from "./HeroHighlights";
+import HeroRightPanel from "./HeroRightPanel";
 
 function Hero(): React.ReactElement {
   return (
@@ -34,11 +36,10 @@ function Hero(): React.ReactElement {
           <Count number="12k" description="Total Downloads" />
           <Count number="10k" description="Active Users" />
         </div>
-        <div className="border-dark-15 laptop:pl-[80px] col-span-1 col-start-3 row-span-2 border-l pt-[150px]">
-          right content
-        </div>
+        <HeroRightPanel />
         <div className="border-dark-15 col-span-1 col-start-1 row-span-1 row-start-2 border-t" />
       </div>
+      <HeroHighlights />
     </>
   );
 }
