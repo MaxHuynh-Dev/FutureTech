@@ -8,10 +8,10 @@ const textVariants = cva("text-foreground transition-colors duration-200", {
       12: "tracking-[-0.36px] text-[12px]/[1.5] laptop:tracking-[-0.42px] laptop:text-[14px] desktop:tracking-[-0.54px] desktop:text-[18px]",
       14: "text-[14px]/[1.5] laptop:text-[16px] desktop:text-[18px]",
       16: "text-base",
-      18: "tracking-[-0.54px] text-[18px]/[1.2] laptop:tracking-[-0.66px] laptop:text-[22px] desktop:tracking-[-0.9px] desktop:text-[30px]",
+      18: "tracking-[-0.54px] text-[18px]/[1.2] laptop:tracking-[-0.66px] laptop:text-[22px] desktop:tracking-[-1.2px] desktop:text-[30px]",
 
       //   20: 'text-xl laptop:text-2xl',
-      //   24: 'text-2xl laptop:text-3xl',
+      24: "tracking-[-0.72px] text-[24px]/[1.5] laptop:tracking-[-0.9px] laptop:text-[28px] desktop:tracking-[-1.08px] desktop:text-[32px]",
       30: "tracking-[-0.9px] text-[30px]/[1.2] laptop:tracking-[-1.65px] laptop:text-[55px] desktop:tracking-[-2.1px] desktop:text-[70px]",
       //   36: 'text-4xl laptop:text-5xl desktop:text-6xl',
       //   48: 'text-5xl laptop:text-6xl desktop:text-7xl',

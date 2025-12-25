@@ -1,14 +1,14 @@
 "use client";
 
-import { Container, GridContainer } from "@/components/Container";
 import Text from "@/components/ui/text";
 import type React from "react";
+import Count from "./Count";
 
 function Hero(): React.ReactElement {
   return (
-    <Container className="laptop:mt-[126px] desktop:mt-[170px] mt-[149px]">
-      <GridContainer className="">
-        <div className="laptop:pt-[100px] desktop:pt-[150px] col-span-7 pt-[40px]">
+    <>
+      <div className="desktop:grid-cols-[1fr_943px_653px_1fr] laptop:grid-cols-[1fr_837px_523px_1fr] laptop:mt-[126px] desktop:mt-[170px] divide-dark-15 mt-[149px] grid grid-cols-[1fr_358px_1fr] grid-rows-[1fr_auto]">
+        <div className="laptop:pt-[100px] desktop:pt-[150px] laptop:pb-[100px] col-span-1 col-start-2 pt-[40px] pb-[30px]">
           <Text as="p" size={18} weight="medium" color="dark-40" font="heading">
             Your Journey to Tomorrow Begins Here
           </Text>
@@ -29,11 +29,17 @@ function Hero(): React.ReactElement {
             AI.
           </Text>
         </div>
-        <div className="border-dark-15 laptop:pl-[80px] col-span-5 border-l pt-[150px]">
+        <div className="border-dark-15 divide-dark-15 desktop:gap-[50px] laptop:gap-[40px] col-span-1 col-start-2 row-span-1 row-start-2 grid grid-cols-3 gap-[20px] divide-x border-t">
+          <Count number="300" description="Resources available" />
+          <Count number="12k" description="Total Downloads" />
+          <Count number="10k" description="Active Users" />
+        </div>
+        <div className="border-dark-15 laptop:pl-[80px] col-span-1 col-start-3 row-span-2 border-l pt-[150px]">
           right content
         </div>
-      </GridContainer>
-    </Container>
+        <div className="border-dark-15 col-span-1 col-start-1 row-span-1 row-start-2 border-t" />
+      </div>
+    </>
   );
 }
 
