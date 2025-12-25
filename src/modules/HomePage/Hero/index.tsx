@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { Container, GridContainer } from '@/components/Container';
-import type React from 'react';
+import { Container, GridContainer } from "@/components/Container";
+import type React from "react";
 
 function Hero(): React.ReactElement {
   return (
-    <Container className="mt-[149px] laptop:mt-[126px] desktop:mt-[170px]">
+    <Container className="laptop:mt-[126px] desktop:mt-[170px] mt-[149px]">
       <GridContainer className="">
-        <div className="col-span-7 pt-[40px] laptop:pt-[100px] desktop:pt-[150px]">
+        <div className="laptop:pt-[100px] desktop:pt-[150px] col-span-7 pt-[40px]">
           left content
         </div>
-        <div className="col-span-5 border-l border-dark-15 pt-[150px] laptop:pl-[80px]">
-          right content
+        <div className="border-dark-15 laptop:pl-[80px] col-span-5 border-l pt-[150px]">
+          right conten
         </div>
       </GridContainer>
     </Container>
